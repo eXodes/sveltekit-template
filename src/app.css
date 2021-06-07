@@ -1,0 +1,13 @@
+@import '@fontsource/fira-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen bg-primary bg-opacity-5 bg-gradient-to-b from-primary via-secondary to-tertiary text-black text-opacity-70;
+}
+
+#svelte {
+  @apply min-h-screen flex flex-col;
+}
