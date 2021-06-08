@@ -1,4 +1,4 @@
-# SvelteKit + TailwindCSS + Typescript
+# SvelteKit + TailwindCSS + Typescript + Firebase
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte), [`tailwindcss`](https://tailwindcss.com) and [`typescript`](https://www.typescriptlang.org);
 
@@ -33,7 +33,36 @@ npm run check
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
 ```bash
+# build SvelteKit for local preview
 npm run build
+
+# build SvelteKit for Firebase hosting
+npm run build:firebase
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## Deploying
+
+Before deploying with Firebase, create `.firebaserc` set your default Firebase project.
+
+```json5
+{
+  projects: {
+    default: 'sveltekit',
+  },
+}
+```
+
+First go to the functions directory and run the following:
+
+```bash
+# install cloud function dependencies
+npm install
+
+# build cloud function to serve as SSR
+npm run build
+
+# deploy cloud function to firebase
+firebase deploy
+```

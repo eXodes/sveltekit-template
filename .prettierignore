@@ -3,3 +3,4 @@ static/**
 build/**
 src/**/*.js
 node_modules/**
+functions/.eslintrc.js

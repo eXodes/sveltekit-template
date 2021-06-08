@@ -3,3 +3,10 @@ node_modules
 /package
 /.svelte-kit
 /.idea
+/public
+
+# Log
+pubsub-debug.log
+firebase-debug.log
+firestore-debug.log
+ui-debug.log

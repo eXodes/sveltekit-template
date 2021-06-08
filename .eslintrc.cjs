@@ -1,5 +1,10 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    es2017: true,
+    node: true,
+  },
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
@@ -8,17 +13,13 @@ module.exports = {
   ],
   plugins: ['svelte3', '@typescript-eslint', 'tailwindcss'],
   overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
+  ignorePatterns: ['functions'],
   settings: {
     'svelte3/typescript': () => require('typescript'),
   },
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2019,
-  },
-  env: {
-    browser: true,
-    es2017: true,
-    node: true,
   },
   rules: {
     'tailwindcss/classnames-order': 'warn',

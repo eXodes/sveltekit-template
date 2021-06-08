@@ -1,5 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import path from 'path';
+import firebase from 'svelte-adapter-firebase';
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -15,6 +16,7 @@ const config = {
   }),
 
   kit: {
+    adapter: firebase(),
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     vite: {
