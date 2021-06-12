@@ -23,6 +23,10 @@
     "baseUrl": ".",
     "allowJs": false,
     "paths": {
+      "$app/*": [
+        ".svelte-kit/dev/runtime/app/*",
+        ".svelte-kit/build/runtime/app/*"
+      ],
       "$lib/*": ["src/lib/*"],
       "$assets/*": ["src/assets/*"]
     }
